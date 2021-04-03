@@ -6,8 +6,8 @@ import pandas as pd
 from pandas_profiling import ProfileReport
 
 # loading the training and test dataset into the pandas variable
-train_data = pd.read_csv('../../dataset/Train.csv')
-test_data = pd.read_csv('../../dataset/Test.csv')
+train_data = pd.read_csv('../dataset/Train.csv')
+test_data = pd.read_csv('../dataset/Test.csv')
 
 # removing all rows that have more than 3 missing values
 train_data.dropna(thresh=8, inplace=True)
@@ -96,3 +96,6 @@ train_data.set_index('ID', inplace=True)
 # generating the exploratory analysis page for the training dataset
 profile = ProfileReport(train_data, minimal=True, title='Training dataset AFTER analysis')
 profile.to_file("training_AFTER.html")
+
+# exporting the dataframe to a new dataset
+train_data.to_csv(path_or_buf='../Dataset/Train_After.csv')
