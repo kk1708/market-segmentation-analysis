@@ -1,13 +1,10 @@
-# Refer to the analysis report for more details
-
 # importing the required libraries
 import numpy as np
 import pandas as pd 
 from pandas_profiling import ProfileReport
 
-# loading the training and test dataset into the pandas variable
+# loading the training dataset into the pandas variable
 train_data = pd.read_csv('../dataset/Train.csv')
-test_data = pd.read_csv('../dataset/Test.csv')
 
 # removing all rows that have more than 3 missing values
 train_data.dropna(thresh=8, inplace=True)
