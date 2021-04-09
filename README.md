@@ -1,2 +1,4 @@
-# market-segmentation-analysis
- An analysis of customers and their buying habits
+# Market Segmentation
+An analysis of customers and predicting the class to which they belong too
+
+## Overview
